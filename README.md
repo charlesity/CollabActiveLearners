@@ -1,3 +1,3 @@
 # Collaborative Active Learner
 
-refer to requirement.txt for list of dependables
+refer to requirement.txt for list of dependencies
