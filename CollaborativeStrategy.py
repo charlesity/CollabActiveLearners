@@ -82,7 +82,7 @@ class CollaborativeStrategy(QueryStrategy):
         return ask_id
     
     def send_feedback(self, ask_id, theLabel):
-        for l in listLearners:
+        for l in self.aLearners:
             l.receive_feedback(ask_id, theLabel)
 
         
