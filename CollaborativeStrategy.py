@@ -28,7 +28,7 @@ from libact.base.interfaces import QueryStrategy, Model
 from libact.query_strategies import UncertaintySampling, RandomSampling, QUIRE, HintSVM
 import libact.models
 from libact.utils import inherit_docstring_from, seed_random_state, zip
-from libact.labelers import IdealLabeler
+
 
 from alearner import Alearner
 
@@ -61,7 +61,6 @@ class CollaborativeStrategy(QueryStrategy):
     
     @inherit_docstring_from(QueryStrategy)
     def make_query(self):
-        X, _ = zip(*self.dataset.data)
         votes =  {}
         for i in range(len(self.aLearners)):            
             aQueriedPoint, weigted_confidence = self.aLearners[i].vote()
