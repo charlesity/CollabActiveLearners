@@ -56,8 +56,8 @@ class CollaborativeStrategy(QueryStrategy):
     
     @inherit_docstring_from(QueryStrategy)
     def update(self, entry_id, label):
-        trainSet.update(ask_id, theLabel)
-        self.send_feedback(ask_id, theLabel)
+        self.dataset.update(entry_id, label)
+        self.send_feedback(entry_id, label)
     
     @inherit_docstring_from(QueryStrategy)
     def make_query(self):
